@@ -1,11 +1,7 @@
 import BookList from './components/BookList';
 
 function App() {
-  return (
-    <div>
-      <BookList />
-    </div>
-  );
+  return <BookList />;
 }
 
 export default App;

@@ -4,6 +4,8 @@ function BookList() {
   return (
     <section>
       <Book />
+      <Book />
+      <Book />
     </section>
   );
 }
