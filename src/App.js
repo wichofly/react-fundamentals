@@ -1,7 +1,9 @@
+import BookList from './components/BookList';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Recat Course</h1>
+    <div>
+      <BookList />
     </div>
   );
 }
