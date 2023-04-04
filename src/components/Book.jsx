@@ -5,16 +5,10 @@ const inlineHeadingStyle = {
   letterSpacing: '2px',
 };
 
-function Book() {
-  const title = 'Dog Man: Twenty Thousand Fleas Under the Sea';
-  const author = 'Dav Pilkey';
-
+function Book({ img, title, author }) {
   return (
     <article className="book">
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81fyoFoaxlL._AC_UL900_SR900,600_.jpg"
-        alt="Dog man"
-      ></img>
+      <img src={img} alt={title}/>
       <h3>{title}</h3>
       <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
     </article>
