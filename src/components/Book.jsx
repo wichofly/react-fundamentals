@@ -1,3 +1,9 @@
+const inlineHeadingStyle = {
+  color: '#617d98',
+  fontSize: '0.75rem',
+  marginTop: '0.5rem',
+};
+
 function Book() {
   return (
     <article className="book">
@@ -6,7 +12,7 @@ function Book() {
         alt="Dog man"
       ></img>
       <h3>Dog Man: Twenty Thousand Fleas Under the Sea</h3>
-      <h3>Dav Pilkey</h3>
+      <h3 style={inlineHeadingStyle}>Dav Pilkey</h3>
     </article>
   );
 }
