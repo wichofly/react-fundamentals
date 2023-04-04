@@ -1,5 +1,4 @@
 import Book from './Book';
-import EventExample from './EventExample';
 
 const books = [
   {
@@ -26,7 +25,6 @@ const books = [
 function BookList() {
   return (
     <section className="booklist">
-      <EventExample />
       {books.map((book) => {
         // const { img, title, author, id } = book;
         return <Book {...book} key={book.id} />;
