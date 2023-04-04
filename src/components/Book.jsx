@@ -5,12 +5,13 @@ const inlineHeadingStyle = {
   letterSpacing: '2px',
 };
 
-function Book({ img, title, author }) {
+function Book({ img, title, author, children }) {
   return (
     <article className="book">
-      <img src={img} alt={title}/>
+      <img src={img} alt={title} />
       <h3>{title}</h3>
       <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
+      {children}
     </article>
   );
 }
