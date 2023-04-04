@@ -11,3 +11,7 @@ root.render(
   </React.StrictMode>
 );
 
+/*
+  - Readme from the course:
+    https://github.com/john-smilga/react-course-v3/blob/main/01-fundamentals/README.md
+*/
