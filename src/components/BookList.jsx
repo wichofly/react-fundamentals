@@ -23,7 +23,8 @@ function BookList() {
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book img={book.img} title={book.title} author={book.author} />;
+        const { img, title, author } = book;
+        return <Book img={img} title={title} author={author} />;
       })}
     </section>
   );
@@ -36,4 +37,5 @@ export default BookList;
   - Using the map() method, it helps to go through each item and get the information we want. 
     It simplifies the code to not have so many elements for a component. 
     In this case after having 3 <Book /> components, now there is only one. 
+  - Destructuring book helps to use less code and look cleaner
 */
