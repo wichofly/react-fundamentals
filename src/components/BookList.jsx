@@ -26,8 +26,8 @@ function BookList() {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} />;
+        // const { img, title, author, id } = book;
+        return <Book book={book} key={book.id} />;
       })}
     </section>
   );
@@ -41,5 +41,11 @@ export default BookList;
     It simplifies the code to not have so many elements for a component. 
     In this case after having 3 <Book /> components, now there is only one. 
   - Destructuring book helps to use less code and look cleaner.
-  - Get rid of the "key" prop warning in the console,  
+  - Get rid of the "key" prop warning in the console.
+  
+  - There are only 4 items in each object in the viariable book. 
+    This would be a problem if there are many items, because you must call each one in props to call them and in the destructured variable.
+    Options to solve:
+      - Pass the entire object as a prop.
+      - Use spread operator 
 */

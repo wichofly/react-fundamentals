@@ -5,7 +5,7 @@ const inlineHeadingStyle = {
   letterSpacing: '2px',
 };
 
-function Book({ img, title, author, children }) {
+function Book({ book: { img, title, author, children } }) {
   return (
     <article className="book">
       <img src={img} alt={title} />
