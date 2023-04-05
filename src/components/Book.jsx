@@ -6,9 +6,9 @@ const inlineHeadingStyle = {
 };
 
 function Book({ img, title, author, children, getBook, id }) {
-  const getSingleBook = () => {
-    getBook(id);
-  };
+  // const getSingleBook = () => {
+  //   getBook(id);
+  // };
 
   return (
     <article className="book">
@@ -34,4 +34,5 @@ export default Book;
     - Second option, wrap in the anonymous func.
       The reference is kept with the new function that invokes the getBook function. 
       In this case it is not named in the button element but an anonymous function (Arrow function) is passed.
+      I found out that it works well without making a new function in the child component. now is commented and it works.
 */
