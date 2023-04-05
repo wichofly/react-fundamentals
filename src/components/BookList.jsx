@@ -1,26 +1,5 @@
 import Book from './Book';
-
-const books = [
-  {
-    img: 'https://images-na.ssl-images-amazon.com/images/I/81fyoFoaxlL._AC_UL900_SR900,600_.jpg',
-    title: 'Dog Man: Twenty Thousand Fleas Under the Sea',
-    author: 'Dav Pilkey',
-    id: 1,
-  },
-  {
-    img: 'https://images-na.ssl-images-amazon.com/images/I/714Da0RQA5L._AC_UL900_SR900,600_.jpg',
-    title:
-      'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-    author: ' James Clear',
-    id: 2,
-  },
-  {
-    img: 'https://images-na.ssl-images-amazon.com/images/I/810bsxh1MmL._AC_UL900_SR900,600_.jpg',
-    title: 'How to Catch the Easter Bunny',
-    author: ' Adam Wallace',
-    id: 3,
-  },
-];
+import { books } from './booksData';
 
 function BookList() {
   const getBook = (id) => {
@@ -52,4 +31,6 @@ export default BookList;
     Options to solve:
       - Pass the entire object as a prop.
       - Use spread operator 
+
+  - The curly brackets in the import from books, it is important. It means that we get a sepcific item from the file.
 */
