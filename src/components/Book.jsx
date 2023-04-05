@@ -14,7 +14,7 @@ function Book({ img, title, author, children, getBook, id }) {
     <article className="book">
       <img src={img} alt={title} />
       <h3>{title}</h3>
-      <button onClick={getSingleBook}>Display Id</button>
+      <button onClick={() => getBook(id)}>Display Id</button>
       <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
       {children}
     </article>
@@ -31,5 +31,7 @@ export default Book;
     - First option setup wrapper inside of the child component.
       Make a new function and inside the new function invoke the getBook function.
       this will fix the error to show the data when the page loads instead sgow the data when the button is clicked.
-    
+    - Second option, wrap in the anonymous func.
+      The reference is kept with the new function that invokes the getBook function. 
+      In this case it is not named in the button element but an anonymous function (Arrow function) is passed.
 */
