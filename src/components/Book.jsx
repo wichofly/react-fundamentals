@@ -6,11 +6,15 @@ const inlineHeadingStyle = {
 };
 
 function Book({ img, title, author, children, getBook, id }) {
+  const getSingleBook = () => {
+    getBook(id);
+  };
+
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h3>{title}</h3>
-      <button onClick={getBook(id)}>Display Id</button>
+      <button onClick={getSingleBook}>Display Id</button>
       <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
       {children}
     </article>
@@ -24,5 +28,8 @@ export default Book;
     we do not want to do this cause is not happening in a button click, it happens when the app loads because of the parenthesis runs instantly.
 
     Here are the ways to do it better: 
-    - 
+    - First option setup wrapper inside of the child component.
+      Make a new function and inside the new function invoke the getBook function.
+      this will fix the error to show the data when the page loads instead sgow the data when the button is clicked.
+    
 */
