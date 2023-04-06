@@ -16,7 +16,7 @@ function Book({ img, title, author, children, number }) {
       <h3>{title}</h3>
       {/* <button onClick={() => getBook(id)}>Display Id</button> */}
       <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
-      <span>{number + 1}</span>
+      <span className="number">#{number + 1}</span>
       {children}
     </article>
   );
