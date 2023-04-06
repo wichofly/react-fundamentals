@@ -2,15 +2,16 @@ import Book from './Book';
 import { books } from './booksData';
 
 function BookList() {
-  const getBook = (id) => {
-    const book = books.find((book) => book.id === id);
-    console.log(book);
-  };
+  // const getBook = (id) => {
+  //   const book = books.find((book) => book.id === id);
+  //   console.log(book);
+  // };
+
   return (
     <section className="booklist">
-      {books.map((book) => {
+      {books.map((book, index) => {
         // const { img, title, author, id } = book;
-        return <Book {...book} key={book.id} getBook={getBook} />;
+        return <Book {...book} key={book.id} number={index} />;
       })}
     </section>
   );
