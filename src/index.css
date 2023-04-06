@@ -54,6 +54,12 @@ body {
   color: #fff;
 }
 
+.app-title {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);

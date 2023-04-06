@@ -41,4 +41,6 @@ export default Book;
     Get the number id for each book to display it. 
       - To achieve this, we pass the index as a second paramater in th map() method.
         we pass the number in the props of the book component and add  plus 1, cause array are zero index based. 
+
+      - Add a title to the App on the top
 */

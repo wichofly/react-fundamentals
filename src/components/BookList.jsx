@@ -8,12 +8,15 @@ function BookList() {
   // };
 
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        // const { img, title, author, id } = book;
-        return <Book {...book} key={book.id} number={index} />;
-      })}
-    </section>
+    <>
+      <h1 className="app-title">Best seller Books</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          // const { img, title, author, id } = book;
+          return <Book {...book} key={book.id} number={index} />;
+        })}
+      </section>
+    </>
   );
 }
 
