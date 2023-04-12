@@ -1,5 +1,6 @@
 import Book from './Book';
 import { books } from './booksData';
+import { Typography } from '@mui/material';
 
 function BookList() {
   // const getBook = (id) => {
@@ -9,7 +10,9 @@ function BookList() {
 
   return (
     <>
-      <h1 className="app-title">Best seller Books</h1>
+      <div className="app-title">
+        <Typography variant="h2">Best seller Books</Typography>
+      </div>
       <section className="booklist">
         {books.map((book, index) => {
           // const { img, title, author, id } = book;
