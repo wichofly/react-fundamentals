@@ -46,8 +46,8 @@ function AuthorModal({ author, bio, authorImg }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={boxStyle}>
-          <img src={authorImg} alt={author} style={imgStyleModal} />
           <Typography id="modal-modal-title" variant="h6" component="h2">
+            <img src={authorImg} alt={author} style={imgStyleModal} />
             <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 1 }}>
