@@ -1,67 +1,11 @@
-import { useState } from 'react';
-import { Box, Button, Typography, Modal } from '@mui/material';
+import AuthorModal from './AuthorModal';
 
-const inlineHeadingStyle = {
-  color: '#617d98',
-  fontSize: '0.75rem',
-  marginTop: '0.5rem',
-  letterSpacing: '2px',
-};
-
-const boxStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #333',
-  borderRadius: '2rem',
-  boxShadow: 24,
-  p: 4,
-};
-
-const imgStyleModal = {
-  width: '50%',
-  objectFit: 'cover',
-  position: 'relative',
-  top: '50%',
-  left: '25%',
-};
-
-function Book({ img, title, author, children, number, bio, authorImg }) {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  // const getSingleBook = () => {
-  //   getBook(id);
-  // };
-
+function Book({ img, title, children, number, author, bio, authorImg }) {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h3>{title}</h3>
-      {/* <button onClick={() => getBook(id)}>Display Id</button> */}
-      <Button onClick={handleOpen}>
-        <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={boxStyle}>
-          <img src={authorImg} alt={title} style={imgStyleModal} />
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            <h3 style={inlineHeadingStyle}>{author.toUpperCase()}</h3>
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 1 }}>
-            {bio}
-          </Typography>
-        </Box>
-      </Modal>
+      <AuthorModal author={author} bio={bio} authorImg={authorImg} />
       <span className="number">#{number + 1}</span>
       {children}
     </article>
@@ -89,4 +33,8 @@ export default Book;
         we pass the number in the props of the book component and add  plus 1, cause array are zero index based. 
 
       - Add a title to the App on the top
+
+  - I tried using the spread operator to call all AuthorModal properties, for example: "{...authorModal}".
+    It didn't work, it required me to call every property in the Book component of AuthorModal component. 
+    At the end it did work with the result of seeing the modal but not with the spread operator. 
 */
